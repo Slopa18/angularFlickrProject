@@ -1,8 +1,0 @@
-<p>Find some image in flickr</p>
-<label for="query">Search</label>
-<input type="text" name="query" ng-model="query"
-<p class="images">
-    <span ng-repeat="image in images | filter:query>
-	<img src="{{image.src}}" />
-    </span>
-</p>
