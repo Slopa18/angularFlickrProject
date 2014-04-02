@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Flickr app for Brickflow</title>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+	<div ng-controller="ImagesCtrl">
+		<p>Find some image on flickr</p>
+		<input ng-model="query" placeholder="Let's find some picture"/>
+		<button ng-click="search(query);">Search</button>
+		<p class="images">
+			<span ng-repeat="img in images">
+				<img ng-src="https://farm{{img.farm}}.staticflickr.com/{{img.server}}/{{img.id}}_{{img.secret}}_m.jpg" />
+			
+			</span>
+		</p>
+	</div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
